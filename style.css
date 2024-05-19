@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
+  padding: 10px;
+}
+.todo_app {
+  width: 100%;
+  max-width: 540px;
+  background-color: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 10px;
+}
+
+.todo_app h2 {
+  color: black;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.todo_app img {
+  width: 90px;
+  margin-left: 10px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  padding: 10px;
+  font-weight: 14px;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 16px 50px;
+  background-color: #ff59f5;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+ul li {
+  list-style: none;
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-image: url(./images/circle.png);
+  top: 12px;
+  left: 8px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(./images/check-mark.png);
+}
+
+ul li icon {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 22px;
+  color: #555;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li icon:hover {
+  background: #edeef0;
+}
+
+@media (max-width: 768px) {
+  .todo_app {
+    margin: 120px auto;
+    padding: 20px 15px 35px;
+  }
+
+  .todo_app h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .todo_app img {
+    width: 70px;
+    margin-left: 5px;
+  }
+
+  .row {
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 10px;
+  }
+
+  input {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  button {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  ul li {
+    font-size: 15px;
+    padding: 10px 8px 10px 40px;
+  }
+
+  ul li::before {
+    height: 24px;
+    width: 24px;
+    top: 10px;
+  }
+
+  ul li icon {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
